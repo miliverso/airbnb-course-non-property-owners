@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Aprende cómo crear un imperio y generar ingresos en Airbnb sin ser dueño de una propiedad">
+    <title>Academia BNB</title>
+    <link rel="icon" href="images/favicon-academia-bnb.svg" type="images/svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">
+                <p>⚡️Oferta⚡️ 30% de descuento finaliza en</p>
+                <p><span class="span-timer-container"></span></p>
+                <p>¡RÁPIDO! Accede aquí<span class="span-arrow background-image"></span></p>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-background-image background-image">
+            <div class="hero-background-color">
+                <div>
+                    <img src="images/logo-academia-bnb-blanco.svg" alt="Logo Academia BNB">
+                    <h1>Aprende cómo crear un imperio y generar ingresos en <span>Airbnb</span> sin ser dueño de una propiedad</h1>
+                    <a href="">¡Sí, quiero aprender!</a>
+                    <span class="down-arrow background-image"></span>
+                </div>
+            </div>  
+        </section>
+        <section class="course-main-objections">
+            <div class="course-main-objections-title">
+                <h2>Tú quieres aprender...</h2>
+                <p>Nosotros te enseñamos las estrategias que nos han funcionado y nos han generado un ingreso de hasta 6 cifras.</p>
+            </div>
+            <div class="course-main-objections-content">
+                <div class="main-objections-container">
+                    <span class="no-home-icon main-objections-icon background-image"></span>
+                    <h3>Sin ser dueño de una propiedad</h3>
+                    <p>Aprenderás dónde encontrar propietarios para administrar su propiedad y cómo negociar con ellos.</p>
+                </div>
+                <div class="main-objections-container">
+                    <span class="no-experience-before-icon main-objections-icon background-image"></span>
+                    <h3>Sin experiencia previa administrando propiedades </h3>
+                    <p>Aprenderás todo lo que necesitas saber sobre la administración de propiedades.</p>
+                </div>
+                <div class="main-objections-container">
+                    <span class="no-knowledge-icon main-objections-icon background-image"></span>
+                    <h3>Sin conocimientos de cómo funciona Airbnb</h3>
+                    <p>Aprenderás desde 0 todo lo que necesitas saber para posicionar tus anuncios en los primeros lugares.</p>
+                </div>
+                <div class="main-objections-container">
+                    <span class="not-much-money-icon main-objections-icon background-image"></span>
+                    <h3>Sin una gran inversión inicial</h3>
+                    <p>Puedes comenzar con una baja inversión. Y encontrar propiedades ya lista para ponerlas a generar ingresos.</p>
+                </div>
+            </div>
+            <div>
+                <span class="down-arrow background-image"></span>
+            </div>
+        </section>
+        <section class="course-video">
+            <div class="course-video-container">
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/GoW9zk1n6GM?si=IFgnOfeo2I3GmtfM" frameborder="0"  allowfullscreen></iframe>
+            </div>
+            <div class="course-video-pleasure">
+                <div class="course-pleasures-container">
+                    <span class="course-pleasures-icon background-image"></span>
+                    <h3>Una fuente de ingresos rentable</h3>
+                    <p>Para hacer o comprar lo que quieras sin restricciones de dinero.</p>
+                </div>
+                <div class="course-pleasures-container">
+                    <span class="course-pleasures-icon background-image"></span>
+                    <h3>Tiempo para compartir con tu familia</h3>
+                    <p>Te enseñamos a automatizar tu Airbnb para pasar más tiempo con tus seres queridos.</p>
+                </div>
+                <div class="course-pleasures-container">
+                    <span class="course-pleasures-icon background-image"></span>
+                    <h3>Trabaja desde donde quieras</h3>
+                    <p>La libertad y el dinero para viajar mientras tu negocio sigue funcionado.</p>
+                </div>
+            </div>
+            <div>
+                <span class="down-arrow background-image"></span>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script>
+        const timerContainer = document.querySelector(".span-timer-container");
+        timerContainer.innerHTML = "00h:00m:00s";
+        const deadline = () => {
+        let currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let currentDay = currentDate.getDate();
+        let newDay;
+
+        switch (currentDate.getMonth) {
+            case 1:
+                if(currentDate.getDate === 28) {
+                    currentMonth = currentMonth + 1;
+                    newDay = 1;
+                } else {
+                    newDay = currentDay + 1;
+                }
+                break;
+            case 3|5|8|10:
+                if(currentDate.getDate === 30) {
+                    currentMonth =currentMonth+ 1
+                    newDay = 1;
+                } else {
+                    newDay = currentDay + 1;
+                }
+                break;
+            case 11: 
+                if(currentDate.getDate === 31) {
+                    currentMonth = 0
+                    newDay = 1;
+                } else {
+                    newDay = currentDay + 1;
+                }
+            default:
+                if(currentDate.getDate === 31) {
+                    currentMonth = currentMonth + 1;
+                    newDay = 1; 
+                } else {
+                    newDay = currentDay + 1;
+                }
+        }
+        return `${months[currentMonth]} ${newDay} ${currentDate.getFullYear()} 23:59:00 GMT-0500`
+    }
+
+        const getRemainingTime = deadline => {
+            let now = new Date(),
+            remainTime = (new Date(deadline()) - now + 1000) / 1000,
+            remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+            remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+            remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+            remainDays = Math.floor(remainTime / (3600 * 24));
+
+            return {
+                remainSeconds,
+                remainMinutes,
+                remainHours,
+                remainDays,
+                remainTime
+            }
+        };
+
+        
+        const countdown = (deadline) => {
+            const timerUpdate = setInterval( () => {
+                let timer = getRemainingTime(deadline);
+                timerContainer.innerHTML = `${timer.remainHours}h:${timer.remainMinutes}m:${timer.remainSeconds}s`;
+            }, 1000)
+        }
+        countdown(deadline);
+    </script>
+</body>
+</html>
