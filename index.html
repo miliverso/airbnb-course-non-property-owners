@@ -89,7 +89,68 @@
             <div>
                 <span class="down-arrow background-image"></span>
             </div>
-            
+        </section>
+        <section class="attention-please">
+            <div class="attention-please-title">
+                <span class="attention-icon background-image"></span>
+                <h3>¡ATENCIÓN!</h3>
+            </div>
+            <div class="attention-ideal-student">
+                <p>Este curso no es para ti:</p>
+                <ul>
+                    <li><span class="Not-for-u-icon">X</span>Si buscas ganar dinero fácil</li>
+                    <li><span class="Not-for-u-icon">X</span>Si buscas emprender un negocio con 0 inversión</li>
+                    <li><span class="Not-for-u-icon">X</span>Si no te gusta capacitarte.</li>
+                </ul>
+                <p>✓ En este modelo de negocio toca que apliques lo que aprendes con nosotros si quieres tener resultados.</p>
+            </div>
+            <div>
+                <span class="down-arrow background-image"></span>
+            </div>  
+        </section>
+        <section class="course-content">
+            <div class="course-content-container">
+                <h2>Conoce La ruta que te hará dominar Airbnb como un experto</h2>
+                <div class="content-module-container">
+                    <div class="module-name module-name-1">
+                        <p><span class="module-details-opened">-</span><span class="module-details-separator">|</span>Módulo 1</p>
+                    </div>
+                    <div class="module-details module-details-1 module-details-closed">
+                        <p>1 hr 30 min</p>
+                        <ol>
+                            <li>Introducción a Airbnb</li>
+                            <li>Estudio de Mercado</li>
+                        </ol>
+                    </div>
+                </div> 
+                <div class="content-module-container">
+                    <div class="module-name module-name-2">
+                        <p><span class="module-details-opened">-</span><span class="module-details-separator">|</span>Módulo 2</p>
+                    </div>
+                    <div class="module-details module-details-2 module-details-closed">
+                        <p>1 hr 30 min</p>
+                        <ol>
+                            <li>¿Cómo incrementar tu rentabilidad?</li>
+                            <li>¿cómo generar un buen anuncio?</li>
+                        </ol>
+                    </div>
+                </div> 
+                <div class="content-module-container">
+                    <div class="module-name module-name-3">
+                        <p><span class="module-details-opened">-</span><span class="module-details-separator">|</span>Módulo 3</p>
+                    </div>
+                    <div class="module-details module-details-3 module-details-closed">
+                        <p>1 hr 30 min</p>
+                        <ol>
+                            <li>¿Cómo cobrar el dinero de tus reservas?</li>
+                            <li>¿Cómo manejar mis finanzas?</li>
+                        </ol>
+                    </div>
+                </div> 
+            </div>
+            <div>
+                <span class="down-arrow background-image"></span>
+            </div>
         </section>
     </main>
     <footer>
@@ -97,6 +158,24 @@
     <script>
         const timerContainer = document.querySelector(".span-timer-container");
         timerContainer.innerHTML = "00h:00m:00s";
+        const moduleName1 = document.querySelector(".module-name-1");
+        const moduleName2 = document.querySelector(".module-name-2");
+        const moduleName3 = document.querySelector(".module-name-3");
+        const moduleDetails1 = document.querySelector(".module-details-1");
+        const moduleDetails2 = document.querySelector(".module-details-2");
+        const moduleDetails3 = document.querySelector(".module-details-3");
+        const moduleDetailsOpened = document.querySelector(".module-details-opened");
+
+
+
+        moduleName1.addEventListener("click", courseModuleToggle1);
+        moduleName2.addEventListener("click", courseModuleToggle2);
+        moduleName3.addEventListener("click", courseModuleToggle3);
+
+
+
+
+
         const deadline = () => {
         let currentDate = new Date();
         let currentMonth = currentDate.getMonth();
@@ -164,6 +243,37 @@
             }, 1000)
         }
         countdown(deadline);
+
+        function courseModuleToggle1() {
+            moduleDetails1.classList.toggle("module-details-closed");
+            console.log("click")
+            if(moduleDetails.classList.contains("module-details-closed")) {
+                moduleDetailsOpened.innerHTML = "-"
+            } else {
+                moduleDetailsOpened.innerHTML = "+"
+            }
+
+        }
+        function courseModuleToggle2() {
+            moduleDetails2.classList.toggle("module-details-closed");
+            console.log("click")
+            if(moduleDetails.classList.contains("module-details-closed")) {
+                moduleDetailsOpened.innerHTML = "-"
+            } else {
+                moduleDetailsOpened.innerHTML = "+"
+            }
+
+        }
+        function courseModuleToggle3() {
+            moduleDetails3.classList.toggle("module-details-closed");
+            console.log("click")
+            if(moduleDetails.classList.contains("module-details-closed")) {
+                moduleDetailsOpened.innerHTML = "-"
+            } else {
+                moduleDetailsOpened.innerHTML = "+"
+            }
+
+        }
     </script>
 </body>
 </html>
