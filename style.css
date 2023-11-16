@@ -33,6 +33,10 @@ video {
     width: 100%;
     height: auto;
   }
+img {
+    width: 100%;
+    height: auto;
+}
 h1,
 .course-content-container h2 {
     text-transform: uppercase;
@@ -56,14 +60,17 @@ h2 {
     background-size: cover;
     background-position: center;
 }
-.attention-please {
-    background-image: linear-gradient(to bottom, #242424, #252525, #252525, #262626, #272727, #252525, #222222, #202020, #1a1a1a, #141414, #0b0b0b, #000000);
-}
 main .course-content {
-    background-color: #000;
+    background-image: linear-gradient(to bottom, #242424, #1f1f1f, #191919, #141414, #0d0d0d, #090909, #040404, #000000, #000000, #000000, #000000, #000000);
 }
-.for-whom {
+main .for-whom {
     background-image: linear-gradient(to top, #242424, #252525, #252525, #262626, #272727, #252525, #222222, #202020, #1a1a1a, #141414, #0b0b0b, #000000);
+}
+main .course-bonus {
+    background-image: linear-gradient(to bottom, #242424, #212121, #1e1e1e, #1b1b1b, #181818, #161616, #131313, #101010, #0d0d0d, #090909, #040404, #000000);
+}
+main .whatsapp {
+    background-color: black;
 }
 /* mobile header */
 nav {
@@ -132,6 +139,12 @@ h1 span {
     background-color: var(--primary-color);
     border-radius: 12px;
 }
+.hero-background-color div a:hover,
+.sign-up-buttom:hover a {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 .down-arrow {
     display: block;
     width: 70px;
@@ -273,7 +286,8 @@ h1 span {
 .what-others-say,
 .course-bonus-price,
 .course-bonus,
-.whatsapp {
+.whatsapp,
+.proof {
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -360,10 +374,8 @@ h1 span {
     height: auto;
 }
 .course-mock-up img {
-    width: 100%;
     max-width: 600px;
     min-width: 100px;
-    height: auto;
 }
 .course-mock-up div ul {
     line-height: 2;
@@ -456,7 +468,6 @@ h1 span {
 }
 .course-bonus-image-container img {
     width: 200px;
-    height: auto;
 }
 .course-bonus-box div p,
 .course-bonus-box-2 div p {
@@ -473,29 +484,42 @@ h1 span {
 /* mobile whatsapp */
 .whatsapp-container {
     display: grid;
-    width: 80%;
     grid-template-rows: auto auto;
     grid-template-areas: "whatsapp-image" 
                          "whatsapp-text";
     align-items: center;
     justify-items: center;
     gap: 20px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 60px;
+    color: var(--black);
+    background-color: #03bf51;
+    border-radius: 20px;
 }
 .whatsapp-container div:nth-child(1) {
     flex-direction: column;
     grid-area: whatsapp-text;
+    padding-bottom: 28px;
 }
 .whatsapp-container div:nth-child(1) .whatsapp-button a {
-    background-color: #03bf51;
+    background-color: var(--black);
 }
 .whatsapp-container div:nth-child(2) {
     grid-area: whatsapp-image;
 }
+.whatsapp-container div:nth-child(1) .whatsapp-button:hover a {
+    cursor: pointer;
+    transform: scale(1.02);
+}
 .whatsapp-container div:nth-child(2) img {
-    width: 100%;
     min-width: 100px;
-    max-width: 300px;
-    height: auto;
+    max-width: 250px;
+    padding: 12px 0;
+}
+.whatsapp-container div:nth-child(2) img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 footer {
     display: flex;
@@ -503,13 +527,13 @@ footer {
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: #000;
+    color: var(--white);
+    background-color: var(--primary-color);
 }
 footer img {
-    width: 100%;
-    min-width: 50px;
-    max-width: 100px;
-    height: auto;
+    min-width: 20px;
+    max-width: 40px;
+    padding: 12px 0;
 }
 @media (min-width: 433px) {
     /* tablet hero */
@@ -609,7 +633,7 @@ footer img {
     }
     /* tablet whatsapp */
     .whatsapp-container {
-        width: 80%;
+        width: 60%;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "whatsapp-text whatsapp-image";
     }
