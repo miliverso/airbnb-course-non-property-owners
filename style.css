@@ -16,7 +16,11 @@
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
+}
+body {
     color: var(--white);
+    text-align: center;
+    font-size: var(--small-font);
 }
 a {
     text-decoration: none;
@@ -25,25 +29,52 @@ a {
 ul {
     list-style: none;
 }
+video {
+    width: 100%;
+    height: auto;
+  }
+h1,
+.course-content-container h2 {
+    text-transform: uppercase;
+}
+h2 {
+    padding: 28px 0;
+    font-size: 3.6rem;
+    text-align: center;
+}
+.width-height-100 {
+    width: 100%;
+    height: 100%;
+}
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .background-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.attention-please {
+    background-image: linear-gradient(to bottom, #242424, #252525, #252525, #262626, #272727, #252525, #222222, #202020, #1a1a1a, #141414, #0b0b0b, #000000);
+}
+main .course-content {
+    background-color: #000;
+}
+.for-whom {
+    background-image: linear-gradient(to top, #242424, #252525, #252525, #262626, #272727, #252525, #222222, #202020, #1a1a1a, #141414, #0b0b0b, #000000);
+}
 /* mobile header */
 nav {
     position: fixed;
     width: 100%;
-    height: 90px;
+    height: auto;
     background-color: var(--primary-color);
 }
 nav a {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;  
+    padding: 12px 0;
 }
 nav a:hover {
     background-color: #f15358;
@@ -54,32 +85,23 @@ nav a p:nth-child(3) {
 
 nav p {
     font-size: 1.7rem;
-    text-align: center;
-    
 }
 nav p .span-timer-container {
     margin: 0 12px;
     font-size: 2.6rem;
-    font-weight: 700;
+    font-weight: bold;
 }
 /* mobile hero */
 .hero-background-image {
     width: 100%;
-    height: 600px;
+    height: auto;
     background-image: url('images/hero-airbnb-conference-small.jpeg');
 }
 .hero-background-color {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
     background-image: linear-gradient(to bottom, rgba(67, 67, 67, 0.9), rgba(61, 61, 61, 0.9), rgba(55, 55, 55, 0.9), rgba(49, 49, 49, 0.9), rgba(43, 43, 43, 0.9), rgba(38, 38, 38, 0.9), rgba(34, 34, 34, 0.9), rgba(29, 29, 29, 0.9), rgba(24, 24, 24, 0.9), rgba(18, 18, 18, 0.95), rgba(10, 10, 10, 0.99), rgba(0, 0, 0, 1));
 }
 .hero-background-color div {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     width: 89%;
     height: auto;
     margin-top: 180px;
@@ -92,23 +114,21 @@ nav p .span-timer-container {
     height: 120px;
 }
 h1 {
-    padding: 12px;
+    padding: 0 12px;
     font-size: 3rem;
-    text-align: center;
     color: var(--white);
 }
 h1 span {
     color: var(--primary-color);
 }
-.hero-background-color div a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-background-color div a,
+.sign-up-buttom a {
     width: 90%;
     height: 60px;
-    margin: 28px auto 0px auto;
-    font-size: 2rem;
+    margin: 40px auto 0px auto;
+    padding: 0 8px;
     font-weight: bold;
+    text-align: center;
     background-color: var(--primary-color);
     border-radius: 12px;
 }
@@ -121,24 +141,20 @@ h1 span {
 }
 /* mobile main objections */
 .course-main-objections {
-    padding-top: 40px;
     display: grid;
     justify-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center;
     background-image: linear-gradient(to bottom, #000000, #0d0d0d, #161616, #1d1d1d, #242424);
 }
 .course-main-objections-title {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
     width: 75%;
 }
-.course-main-objections-title h2 {
+/* course-main-objections-title and course-bonus  */
+.course-main-objections-title h2,
+.course-bonus h2 {
     font-size: 4rem;
 }
-.course-main-objections-title p {
+.course-main-objections-title p,
+.course-bonus .bonus-paragraph {
     margin: 40px 0 40px 0;
     font-size: 2.4rem;
     font-weight: bold;
@@ -153,9 +169,7 @@ h1 span {
     width: 80%;
 }
 .main-objections-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     
@@ -179,7 +193,6 @@ h1 span {
 }
 .course-main-objections-content div h3 {
     padding-top: 12px;
-    font-size: var(--small-font);
 }
 .course-main-objections-content div p {
     padding: 12px 0 12px 0;
@@ -188,10 +201,7 @@ h1 span {
 }
 /* mobile course video */
 .course-video {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--black);
 }
 .course-video .youtube-video{
@@ -208,16 +218,12 @@ h1 span {
     width: 80%;
 }
 .course-pleasures-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .course-pleasures-container h3{
     margin-top: 20px;
-    font-size: var(--small-font);
-    text-align: center;
 }
 .course-pleasures-container p{
     margin: 20px 0;
@@ -225,16 +231,10 @@ h1 span {
 }
 /* mobile attention please */
 .attention-please {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    height: auto;
     background-color: var(--black);
-}
-.attention-please-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .attention-please h3 {
     font-size: 3rem;
@@ -250,8 +250,6 @@ h1 span {
     display: flex;
     flex-direction: column;
     width: 80%;
-    font-size: 2rem;
-    text-align: center;
     line-height: 1.5;
 }
 .attention-ideal-student p:first-child {
@@ -259,7 +257,6 @@ h1 span {
 }
 .attention-ideal-student ul {
     margin: 0 auto 20px auto;
-    list-style: none;
 }
 .attention-ideal-student .Not-for-u-icon {
     margin-right: 12px;
@@ -270,13 +267,17 @@ h1 span {
     text-align: left;
 }
 /* mobile course content */ 
-.course-content {
-    display: flex;
+/* mobile course content, mobile for whon section together, mobile what others say, mobile course-bonus-price and mobile course-bonus */
+.course-content,
+.for-whom,
+.what-others-say,
+.course-bonus-price,
+.course-bonus,
+.whatsapp {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: auto;
+    text-align: left;
     background-color: var(--black);
 }
 .course-content-container {
@@ -285,25 +286,44 @@ h1 span {
     width: 80%;
     height: auto;
 }
-.course-content-container h2 {
-    padding: 28px 0;
-    font-size: 2.6rem;
-    text-align: center;
-}
+/* mobile course content, mobile for whon section together and mobile what others say */
 .content-module-container {
     color: var(--black);
 }
 .content-module-container .module-name {
-    padding: 12px;
-    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
     font-weight: bold;
     background-color: var(--white);
+    cursor: pointer;
+}
+.content-module-container .module-name div {
+    display: flex;
+    align-items: center;
+}
+.module-name .check-box {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("images/MaterialSymbolsCheckBoxOutlineSharp.svg");
+}
+.details-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.details-closed-icon {
+    background-image: url("images/MaterialSymbolsLightKeyboardArrowDown.svg");
+}
+.details-opened-icon {
+    background-image: url("images/MaterialSymbolsLightKeyboardArrowUp.svg");
 }
 .content-module-container .module-name span {
     margin: 0 1rem;
 }
 .content-module-container .module-details {
-    padding: 20px 0;
+    padding: 20px 8px 20px 0;
     font-size: 1.7rem;
     background-color: #e5e5e5;
 }
@@ -318,10 +338,181 @@ h1 span {
 .module-details ol {
     padding-left: 60px;
 }
+.module-details ol li{
+    font-size: 2rem;
+    line-height: 1.6;
+}
+/* mobile what others say */
+.testimonials-video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 40px;
+    width: 80%;
+    height: auto;
+    padding-top: 20px;
+}
+/* mobile course-bonus-price */
+.course-mock-up {
+    display: grid;
+    align-items: center;
+    width: 80%;
+    height: auto;
+}
+.course-mock-up img {
+    width: 100%;
+    max-width: 600px;
+    min-width: 100px;
+    height: auto;
+}
+.course-mock-up div ul {
+    line-height: 2;
+    text-align: left;
+}
+.course-mock-up div p {
+    margin-top: 12px;
+}
+.course-mock-up div p span {
+    font-weight: bold;
+}
+.course-mock-up div ul li span {
+    color: var(--primary-color);
+}
+.course-price {
+    width: 80%;
+    text-align: center;
+    line-height: 2;
+}
+.course-price .course-value {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+.course-price .normal-price {
+    font-size: 2.5rem;
+    text-decoration: line-through;
+}
+.course-discount {
+    margin-top: 28px;
+    line-height: 1.4;
+}
+.course-discount p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.course-discount p:nth-child(2) {
+    font-size: 3.5rem;
+}
+.course-discount p:nth-child(3) {
+    font-size: 5.5rem;
+    font-weight: bold;
+}
+/* mobile course-bonus */
+.course-bonus h2 {
+    font-size: rem;
+}
+.course-bonus .bonus-paragraph {
+    padding: 0 20px;
+    text-align: center;
+}
+.course-bonus-container {
+    flex-direction: column;
+    width: 80%;
+    gap: 120px;
+}
+.course-bonus-box,
+.course-bonus-box-2 {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: "course-bonus-image" 
+                         "course-bonus-text";
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.course-bonus-box .course-bonus-image-container,
+.course-bonus-box-2 .course-bonus-image-container {
+    grid-area: course-bonus-image;
+}
+.course-bonus-box .course-bonus-text-container,
+.course-bonus-box-2 .course-bonus-text-container {
+    grid-area: course-bonus-text;
+}
+.course-bonus-box div h3,
+.course-bonus-box-2 div h3{
+    font-size: 3rem;
+    padding-bottom: 28px;
+}
+.course-bonus-box div ul,
+.course-bonus-box-2 div ul {
+    line-height: 1.7;
+}
+.bonus-span {
+    font-size: 2.5rem;
+    display: flex;
+    padding-bottom: 20px;
+    color: var(--primary-color);
+}
+.course-bonus-image-container img {
+    width: 200px;
+    height: auto;
+}
+.course-bonus-box div p,
+.course-bonus-box-2 div p {
+    padding-top: 28px;
+    font-size: 2rem;
+    line-height: 1.7;
+}
+.bonus-value {
+    text-decoration: line-through;
+}
+.bonus-free {
+    font-weight: bold;
+}
+/* mobile whatsapp */
+.whatsapp-container {
+    display: grid;
+    width: 80%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "whatsapp-image" 
+                         "whatsapp-text";
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+.whatsapp-container div:nth-child(1) {
+    flex-direction: column;
+    grid-area: whatsapp-text;
+}
+.whatsapp-container div:nth-child(1) .whatsapp-button a {
+    background-color: #03bf51;
+}
+.whatsapp-container div:nth-child(2) {
+    grid-area: whatsapp-image;
+}
+.whatsapp-container div:nth-child(2) img {
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+    height: auto;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+}
+footer img {
+    width: 100%;
+    min-width: 50px;
+    max-width: 100px;
+    height: auto;
+}
 @media (min-width: 433px) {
-    nav p {
-        font-size: var(--small-font);
-    }
+    /* tablet hero */
     .hero-background-image {
         height: 800px;
     }
@@ -329,8 +520,9 @@ h1 span {
         width: 90%;
         margin-top: 60px;
     }
-    .hero-background-color div a {
-        width: 330px;
+    .hero-background-color div a,
+    .sign-up-buttom {
+        width: 340px;
     }
     .hero-background-color img {
         width: 150px;
@@ -339,13 +531,16 @@ h1 span {
     h1 {    
         font-size: var(--medium-font);
     }
+    /* tablet main objections */
     .course-main-objections-title h2 {
         font-size: 6rem;
     }
+    /* tablet course video */
     .course-video .youtube-video{
         width: 384px;
         height: 216px;
     }
+    /* tablet attention please */
     .attention-please h3 {
         font-size: 4rem;
         color: var(--primary-color);
@@ -359,24 +554,22 @@ h1 span {
         font-size: 2.3rem;
     }
     .attention-ideal-student ul li {
-    font-size: 1.8rem;
+        font-size: 2rem;
     }
-    /* mobile course content */ 
+    /* tablet course content */ 
     .course-content-container {
         width: 80%;
         height: 80%;
     }
     .course-content-container h2 {
         font-size: 3.5rem;
-        text-align: center;
     }
     .content-module-container .module-name {
-        padding: 12px;
+        padding: 8px;
         font-size: 2.5rem;
     }
     .content-module-container .module-details {
         padding: 20px 0;
-        font-size: 2rem;
     }
     .module-details p {
         padding: 0 0 8px 60px;
@@ -384,11 +577,45 @@ h1 span {
     .module-details ol {
         padding-left: 80px;
     }
+    .course-price .course-value {
+        font-size: 3rem;
+    }
+    .course-discount p:nth-child(1) {
+        font-size: 4rem;
+    }
+    .course-discount p:nth-child(2) {
+        font-size: 4.5rem;
+    }
+    .course-discount p:nth-child(3) {
+        font-size: 7.5rem;
+    }
+    /* tablet course-bonus */
+    .course-bonus h2 {
+        font-size: 6rem;
+    }
+}
+@media (min-width: 700px) {
+    .course-bonus-box {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "course-bonus-image course-bonus-text";
+    }
+    .course-bonus-box-2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "course-bonus-text course-bonus-image";
+        text-align: right;
+    }
+    .bonus-span-2 {
+        justify-content: flex-end;
+    }
+    /* tablet whatsapp */
+    .whatsapp-container {
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "whatsapp-text whatsapp-image";
+    }
 }
 @media (min-width: 880px) {
-    nav {
-        height: 60px;
-    }
+     /* desktop header 880px */
     nav a {
         flex-direction: row;
     }
@@ -402,37 +629,81 @@ h1 span {
     nav a:hover .span-arrow {
         background-image: url("images/CiArrowRightLg.svg");
     }
-    .course-main-objections-title h2 {
+    /* desktop hero */
+    h1 {    
+        font-size: 4rem;
+        line-height: 1.3;
+    }
+    /* desktop main objections */
+    .course-main-objections-title h2,
+    .course-bonus h2 {
         font-size: var(--extra-large-font);
     }
+    .course-main-objections-title p,
+    .course-bonus .bonus-paragraph {
+        font-size: 3.2rem;
+    }
+    .course-main-objections-content div p {
+        font-size: 2.3rem;
+    }
+    /* desktop course video */
     .course-video .youtube-video{
         width: 854px;
         height: 480px;
     }
+    .course-pleasures-container p {
+        font-size: 2.3rem;
+    }
+     /* desktop attention please */
     .attention-ideal-student {
         font-size: 3rem;
     }
-    .attention-ideal-student ul li {
-    font-size: 2rem;
+    .attention-ideal-student ul li,
+    .course-mock-up div ul,
+    .course-bonus-box div ul,
+    .course-bonus-box-2 div ul,
+    .course-bonus-box .bonus-container-paragraph,
+    .course-bonus-box-2 .bonus-container-paragraph {
+        font-size: 2.3rem;
     }
-    /* mobile course content */ 
+    .course-bonus-box div p:nth-child(1) {
+        color: red;
+    }
+    /* desktop course content */ 
     .course-content-container {
-        width: 80%;
+        width: 60%;
         height: 80%;
     }
-    h1 {    
-        font-size: 5rem;
-        line-height: 1.3;
+    .module-details p {
+        font-size: 2.3rem;
+    }
+    .module-details ol li{
+        font-size: 2.3rem;
+        line-height: 2;
+    }
+    /* desktop course mock up */ 
+    .course-mock-up {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    /* mobile course-bonus */
+    .course-bonus h2 {
+        font-size: 8rem;
+    }
+    .course-bonus-box div h3,
+    .course-bonus-box-2 div h3 {
+        font-size: 4rem;
     }
 @media (min-width: 1024px) {
+     /* desktop hero 1024px */
     .hero-background-image {
         background-image: url('images/hero.jpg');
     }
     .hero-background-color div {
         width: 69%;
     }
-    .hero-background-color div a {
-        width: 330px;
+    .hero-background-color div a,
+    .sign-up-buttom {
+        width: 440px;
         font-size: 2.3rem;
     }    
 }
